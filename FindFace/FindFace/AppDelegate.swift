@@ -3,7 +3,7 @@
 //  FindFace
 //
 //  Created by Reddy on 29/03/18.
-//  Copyright © 2018 CleanHarbors. All rights reserved.
+//  Copyright © 2018 Purushotham. All rights reserved.
 //
 
 import UIKit
@@ -40,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    /*
+ Rani Agrawal
+ Rani Karnaa
+ Rani Karnaa
+ 
+  Rahul Bose
+  Rahul Dravid
+     */
 
 
 }

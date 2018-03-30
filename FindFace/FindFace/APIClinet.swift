@@ -3,11 +3,12 @@
 //  FindFace
 //
 //  Created by Reddy on 29/03/18.
-//  Copyright © 2018 CleanHarbors. All rights reserved.
+//  Copyright © 2018 Purushotham. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import ImageIO
 
 /*
  // Map names from Response
@@ -126,6 +127,41 @@ class APIClient: NSObject {
     task.resume()
         
     }
+    
+    class func centerImageforFace(imageview:UIImageView){
+        let context = CIContext(options:nil)
+        let options = [CIDetectorAccuracy:CIDetectorAccuracyHigh]
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: context, options: options)
+        
+        let faceImage = imageview.image
+        let ciImage = CIImage(cgImage:(faceImage!.cgImage!))
+        let features = detector?.features(in: ciImage)
+        
+        if features!.count > 0 {
+            var face:CIFaceFeature!
+            for rect in features! {
+                face = rect as! CIFaceFeature
+            }
+            var faceRectWithExtendedBounds = face.bounds
+            faceRectWithExtendedBounds.origin.x -= 20
+            faceRectWithExtendedBounds.origin.y -= 30
+            
+            faceRectWithExtendedBounds.size.width += 40
+            faceRectWithExtendedBounds.size.width += 60
+            
+            let x = faceRectWithExtendedBounds.origin.x / faceImage!.size.width
+            let y = (faceImage!.size.height - faceRectWithExtendedBounds.origin.y - faceRectWithExtendedBounds.size.height) / faceImage!.size.height
+            
+            let widthFace = faceRectWithExtendedBounds.size.width / faceImage!.size.width
+            let heightFace = faceRectWithExtendedBounds.size.height / faceImage!.size.height
+            
+            imageview.layer.contentsRect = CGRect(x: x, y: y, width: widthFace, height: heightFace)
+        }
+        
+    }
+    
+    
+    
     
     fileprivate func getImage(url:String) -> UIImage{
     
