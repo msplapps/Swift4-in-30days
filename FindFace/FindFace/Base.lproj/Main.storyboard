@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GurmukhiMN.ttc">
+            <string>GurmukhiMN-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day-kratux" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-ip-17c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Um-dk-7Xc">
+                                <rect key="frame" x="46" y="120" width="282" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="98u-Vq-FpV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="it6-zq-b4e"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2W-yJ-dHJ">
+                                <rect key="frame" x="37.5" y="224" width="300" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2su-aq-Tzf"/>
+                                    <constraint firstAttribute="height" constant="400" id="47E-EL-3qI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIKIFACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4a-2B-5j4">
+                                <rect key="frame" x="46" y="29" width="282" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ZRT-eq-b3r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-Tm-VL3">
+                                <rect key="frame" x="46" y="169" width="282" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="XJ1-NR-E2z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.81711900230000001" green="0.2205810547" blue="0.2156537473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Um-dk-7Xc" secondAttribute="trailing" constant="47" id="0T7-Oo-XtC"/>
+                            <constraint firstItem="jsX-ip-17c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6jL-ne-ghl"/>
+                            <constraint firstItem="jsX-ip-17c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ag1-XZ-oAR"/>
+                            <constraint firstItem="8Um-dk-7Xc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="JRe-ka-rTr"/>
+                            <constraint firstItem="8e0-Tm-VL3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="OiQ-uV-6FZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a4a-2B-5j4" secondAttribute="trailing" constant="47" id="P9G-fB-fdc"/>
+                            <constraint firstItem="a4a-2B-5j4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Pmd-qp-VFx"/>
+                            <constraint firstItem="8Um-dk-7Xc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="QlL-4m-8l4"/>
+                            <constraint firstItem="jsX-ip-17c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W7X-VJ-rvn"/>
+                            <constraint firstItem="jsX-ip-17c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XIh-SA-fQF"/>
+                            <constraint firstItem="O2W-yJ-dHJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZU5-MX-mMR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O2W-yJ-dHJ" secondAttribute="bottom" constant="43" id="abL-2Y-dcV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8e0-Tm-VL3" secondAttribute="trailing" constant="47" id="clc-4E-5Un"/>
+                            <constraint firstItem="8e0-Tm-VL3" firstAttribute="top" secondItem="8Um-dk-7Xc" secondAttribute="bottom" constant="19" id="gSU-bl-tSP"/>
+                            <constraint firstItem="O2W-yJ-dHJ" firstAttribute="top" secondItem="8Um-dk-7Xc" secondAttribute="bottom" constant="74" id="uOi-zL-97C"/>
+                            <constraint firstItem="a4a-2B-5j4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="zSG-e8-A5V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceImageView" destination="O2W-yJ-dHJ" id="EUj-jd-X3C"/>
+                        <outlet property="nameTextFiled" destination="8Um-dk-7Xc" id="ARF-ez-SKG"/>
+                        <outlet property="statusLabel" destination="8e0-Tm-VL3" id="WJ7-BA-Uba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="day-kratux" width="640" height="1136"/>
+    </resources>
+</document>
