@@ -53,7 +53,7 @@ class SearchViewController: UIViewController {
   // NOTE: the lazy creation of downloadsSession: this lets you delay the creation of the session until it's needed
   // most importantly, it lets you pass self as the delegate parameter to the initializer - even if self isn't initialized
   lazy var downloadsSession: URLSession = {
-    // instead of using the default session configuration, you use a special background session configuration
+    // instead of using the default session configuration, you use a ø special background session configuration
     // you also set a unique identifier for the session here to allow you to reference and "reconnect" to the same background session if needed
     let configuration = URLSessionConfiguration.background(withIdentifier: "bgSessionConfiguration")
     let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
@@ -67,7 +67,8 @@ class SearchViewController: UIViewController {
     tableView.tableFooterView = UIView()
     // calling the lazily-loaded downloadsSession ensures the app creates exactly one background session upon initialization of SearchViewController
     _ = self.downloadsSession
-  }
+    
+
   
   // MARK: Handling Search Results
   
